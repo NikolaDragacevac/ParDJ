@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <script src="../JS/visibilitySwap.js" ></script>
+    <title>Room Management</title>
+    <body>
+        <div id="page"> 
+                <div id = "choose-option">
+                    <button onclick="createRoom()">Create room</button>
+                    <button onclick="joinRoom()">Join existing room</button>
+                </div>
+                <div id = "create-room" style="display:none">
+                    Already got a room? <button onclick="joinRoom()">Create room</button>
+                </div>
+                <div id = "join-room" style="display:none">
+                    Need to create a room? <button onclick="createRoom()">Join existing room</button>
+                </div>
+        </div>
+    </body>
+</html> 
