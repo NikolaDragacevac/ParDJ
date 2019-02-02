@@ -6,24 +6,24 @@
             Hello and welcome to *INSERT NAME HERE*.
         </div>
         <div id="my-login-button-target" />
-        <script>       
-        window.snapKitInit = function () {
-            var loginButtonIconId = 'my-login-button-target';
-            // Mount Login Button
-            snap.loginkit.mountButton(loginButtonIconId, {
+        <script>
+            window.snapKitInit = function () {
+                var loginButtonIconId = 'my-login-button-target';
+                // Mount Login Button
+                snap.loginkit.mountButton(loginButtonIconId, {
                 clientId: 'your-clientId',
-                redirectURI: 'site-pages/loggedin.html',
+                redirectURI: 'your-redirectURI',
                 scopeList: [
-                'user.display_name',
-                'user.bitmoji.avatar',
+                    'user.display_name',
+                    'user.bitmoji.avatar',
                 ],
                 handleResponseCallback: function() {
-                snap.loginkit.fetchUserInfo()
+                    snap.loginkit.fetchUserInfo()
                     .then(data => console.log('User info:', data));
                 },
-            });
+                });
             };
-
+        
             // Load the SDK asynchronously
             (function (d, s, id) {
                 var js, sjs = d.getElementsByTagName(s)[0];
