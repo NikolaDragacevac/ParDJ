@@ -30,3 +30,22 @@ function checkID(){
 function testing(value){
     return "::ffff:" + document.getElementById("serverID").value == value;
 }
+
+function clientJoinRoom(){
+    if(clientCheckID() == true)
+    {
+        document.getElementById("lblClientError").style.display = "none";
+    }
+    else 
+    {
+        document.getElementById("lblClientError").style.display = "block";
+    }
+}
+
+function clientCheckID(){
+    return servers.findIndex(clientTesting) >= 0;
+}
+
+function clientTesting(value){
+    return "::ffff:" + document.getElementById("clientServerID").value == value;
+}

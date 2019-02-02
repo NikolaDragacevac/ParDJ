@@ -11,17 +11,18 @@
                 </div>
 
                 <div id = "create-room" style="display:none">
-                    Already got a room? <button onclick="joinRoom()">Join Existing room</button>
-                    <br />
                     Server ID: <input type = "text" id = "serverID"/>
                     <br />
-                    <button onclick="doLogin()">Join Room</button>
+                    <button onclick="doLogin()">Create Room</button>
                     <label id = "lblError" style="display:none">Too bad</label>
                     <label id = "lblSuccess" style="display:none">Well done</label>
                 </div>
 
                 <div id = "join-room" style="display:none">
-                    Need to create a room? <button onclick="createRoom()">Create new room</button>
+                    Type in RoomID to be sent to the corresponding room:<input type = "text" id = "clientServerID"/>
+                    <br />
+                    <button onclick="clientJoinRoom()">Join Room</button>
+                    <label id = "lblClientError" style="display:none">Too bad</label>
                 </div>
         </div>
     </body>
