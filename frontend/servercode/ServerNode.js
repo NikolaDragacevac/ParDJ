@@ -1,5 +1,5 @@
 const net = require('net');
-var servers = []; // require('../Server/JSON/Servers.json');
+var servers = require('../src/Util/Servers.json');
 const fs = require('fs');
 
 console.log(servers);
@@ -11,7 +11,7 @@ const server = net.createServer((c) => {
     c.on('end', () => {
         console.log('client disconnected');
     });
-    fs.writeFile("../src/Servers.json", JSON.stringify(servers), function(err) {
+    fs.writeFile("../src/Util/Servers.json", JSON.stringify(servers), function(err) {
         if(err) {
             return console.log(err);
         }

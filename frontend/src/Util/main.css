@@ -46,6 +46,12 @@ code {
   border-radius: 50px;
 }
 
+.button3 {
+  background-color: #1db954;
+  color: white;
+  padding: 2% 5%;
+}
+
 .buttonleft {
   float: left;
 }
@@ -58,4 +64,17 @@ code {
   height: 50%;
   width: 40%;
   padding: 1% ;
+}
+
+input[type="text"] {
+  background-color: Burgundy;
+  border: none;
+  color: Black;
+  padding: 2% 5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 75%;
+  margin: .25% .25%;
+  border-radius: 50px;
 }

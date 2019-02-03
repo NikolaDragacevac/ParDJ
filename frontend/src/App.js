@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import './main.css';
+import './Util/main.css';
 import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
-import Landing from './landing';
+import Landing from './JS/landing';
+import Selection from './JS/loggedin';
+import Create from './JS/create';
+import Join from './JS/join';
 
 class App extends Component {
   render() {
@@ -10,6 +13,9 @@ class App extends Component {
         <Switch>
           <div className="App">
             <Route exact path="/" component={Landing}/>
+            <Route path="/loggedin" component={Selection}/>
+            <Route path="/create" component={Create}/>
+            <Route path="/join" component={Join}/>
           </div>
         </Switch>
       </Router>
