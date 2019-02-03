@@ -9,8 +9,6 @@ export default class Join extends Component{
     this.state = {value: ''};
     this.state = {error: ''};
     this.state = {test: ''};
-    this.state = {test2: ''};
-    this.state = {data: ''};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,31 +31,17 @@ export default class Join extends Component{
   }
 
   async componentDidMount(){
-    const check = await this.postThingy();
-    console.log(check);
-    // request.post('http://localhost:3001/').set("Host", "fuck me").send( "Kill me if this works!");
-    this.setState({test: check.body});
-  }
-
-  async postThingy() {
-    return fetch('http://localhost:3001/', {
-      method: 'POST',
-      headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},
-      body: 'this is a post req from the frontend'
-    }).then(response => response.json());
+    const check2 = await request.get('http://localhost:3001');
+    this.setState({test: JSON.stringify(check2.text)});
   }
 
   POSTrequest(){
-    this.setState({data: "Receivingsss:"});
-    var that = this;
+    this.setState({data: "Receivings:"});
+    // var that = this;
     fetch('http://localhost:3001/', {method:'POST', headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},body: 'this is a post req from the frontend'})
     .then(function(res){
       this.setState({test2: "Receiving:" + res.body});
     })
-  }
-
-  fieldCheck(){
-    this.POSTrequest();
   }
 
   render(){
@@ -72,9 +56,7 @@ export default class Join extends Component{
           <br />
           {this.state.error}
           {this.state.test}
-          {this.state.test2}
-          {this.state.data}
-           <input type="button" name="submit" value="Submit" onClick={() => this.fieldCheck()}/>
+          <input type="submit" name="submit" value="Submit" onClick={() => this.POSTrequest()}/>
         </form>
       </header>
     );
