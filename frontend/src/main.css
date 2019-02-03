@@ -1,3 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #EC5578
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
 .App {
   text-align: center;
 }
@@ -27,15 +43,14 @@
   display: inline-block;
   font-size: 75%;
   margin: .25% .25%;
+  border-radius: 50px;
 }
 
-.button1 {
-  border-radius: 50px;
+.buttonleft {
   float: left;
 }
 
-.button2 {
-  border-radius: 50px;
+.buttonright {
   float: right;
 }
 

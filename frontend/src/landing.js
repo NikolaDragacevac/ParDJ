@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+import './main.css';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-
 
 export default class Landing extends Component {
   render() {
@@ -12,7 +11,7 @@ export default class Landing extends Component {
         </h1>
         <div id="my-login-button-target" />
         <p>
-          Landing Page
+          Login with Snapchat to begin
         </p>
       </header>
     );
