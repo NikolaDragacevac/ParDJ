@@ -1,7 +1,16 @@
-const express = require('express')
+const express = require('express');
+var data = require("../src/Util/Servers.json")
 const app = express()
-const port = 3001
+const bodyParser = require('body-parser')
 
-app.get('/', (req, res) => res.send('Hello World!'))
+ app.use(bodyParser.json());
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.post('/', (req, res) => {
+    console.log(req.Host)
+    console.log("sending data")
+
+    res.send("heres the response!");
+});
+
+app.listen(3001, () => console.log(`Listening on port 3001!`))
+
