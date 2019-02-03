@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
+import './Util/main.css';
 import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
-import Landing from './landing';
-import Selection from './page2';
-import Create from './create';
-import Join from './join'
+import Landing from './JS/landing';
+import Selection from './JS/loggedin';
+import Create from './JS/create';
+import Join from './JS/join';
 
 class App extends Component {
   render() {
@@ -13,7 +13,7 @@ class App extends Component {
         <Switch>
           <div className="App">
             <Route exact path="/" component={Landing}/>
-            <Route path="/page2" component={Selection}/>
+            <Route path="/loggedin" component={Selection}/>
             <Route path="/create" component={Create}/>
             <Route path="/join" component={Join}/>
           </div>
@@ -22,5 +22,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;
