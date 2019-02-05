@@ -14,9 +14,6 @@ export default class Selection extends Component {
           <a class = "button buttonleft" href="/create">Create room</a>
           <a class = "button buttonright" href="/join">Join room</a>
         </div>
-        <p>
-          Cool
-        </p>
       </header>
     );
   }
