@@ -10,9 +10,6 @@ export default class Create extends Component{
           Log in to your spotify
         </h1>
           <button class = "button button3">Log in to Spotify</button>
-        <p>
-          Cool
-        </p>
       </header>
     );
   }
