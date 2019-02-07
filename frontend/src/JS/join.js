@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../Util/main.css';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 var request = require('superagent');
 
 export default class Join extends Component{

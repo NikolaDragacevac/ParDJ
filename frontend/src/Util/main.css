@@ -6,7 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #EC5578
+  background-color: #EC5578;
+  text-align: center;
 }
 
 code {
@@ -66,7 +67,7 @@ code {
   padding: 1% ;
 }
 
-input[type="text"] {
+input {
   background-color: Burgundy;
   border: none;
   color: Black;
