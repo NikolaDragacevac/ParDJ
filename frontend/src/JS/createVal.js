@@ -39,7 +39,6 @@ export default class Join extends Component{
 
   search(){
     request.post('http://localhost:3001/roomLogin')
-      .accept('application/json')
       .type('application/json')
       .send({login: "" + this.state.login, password: "" + this.state.password})
       .then((res) => {
