@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './Util/main.css';
 import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
 import Landing from './JS/landing';
-import Selection from './JS/loggedin';
-import loggedInVal from './JS/loggedinval';
 import Create from './JS/create';
+import loggedInSC from './JS/loggedinSC';
+import createVal from './JS/createVal';
 import Join from './JS/join';
 
 class App extends Component {
@@ -13,10 +13,10 @@ class App extends Component {
       <Router>
         <Switch>
             <Route exact path="/" component={Landing}/>
-            <Route path="/loggedin" component={Selection}/>
-            <Route path="/join" component={Join}/>
+            <Route path="/loggedinSC" component={loggedInSC}/>
             <Route path="/create" component={Create}/>
-            <Route path="/createValidated" component={loggedInVal}/>
+            <Route path="/createValidated" component={createVal}/>
+            <Route path="/join" component={Join}/>
         </Switch>
       </Router>
     );
