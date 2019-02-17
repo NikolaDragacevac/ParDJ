@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../Util/main.css';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 
 export default class Selection extends Component {
@@ -11,8 +10,8 @@ export default class Selection extends Component {
           Create or Join a room
         </h1>
         <div id="div1">
-          <a class = "button buttonleft" href="/create">Create room</a>
-          <a class = "button buttonright" href="/join">Join room</a>
+          <a className = "button buttonleft" href="/create">Create room</a>
+          <a className = "button buttonright" href="/join">Join room</a>
         </div>
       </header>
     );
